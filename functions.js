@@ -11,7 +11,11 @@
  * - returns the name of the channel
  ****************************************************************/
 function getChannelName(channel) {
-  // Your code here
+  
+
+return channel.name;
+
+
 }
 
 /**************************************************************
@@ -21,6 +25,8 @@ function getChannelName(channel) {
  ****************************************************************/
 function numberOfVideos(channel) {
   // Your code here
+
+  return channel.videos.length;
 }
 
 /**************************************************************
@@ -33,9 +39,14 @@ function numberOfVideos(channel) {
  * BONUS: use iteration method `.some()`
  ****************************************************************/
 function channelHasVideo(videoTitle, channel) {
-  // Your code here
-}
 
+  let test = channel.videos.some(video=> videoTitle===video.title);
+  if (test === true){return true;}
+  else false;
+
+  // Your code 
+  
+}
 /**************************************************************
  * getChannelByName(channelName, channels):
  * - receives a channel name (string)
@@ -45,6 +56,10 @@ function channelHasVideo(videoTitle, channel) {
  * BONUS: use iteration method `.find()`
  ****************************************************************/
 function getChannelByName(channelName, channels) {
+
+  let foundchannel = channels.find((channel)=> channelName === channel.name);
+  return foundchannel;
+
   // Your code here
 }
 
